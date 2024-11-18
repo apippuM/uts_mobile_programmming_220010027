@@ -4,9 +4,9 @@ class Hewan {
   String description;
   String imageUrl;
 
-  Hewan(
-    this.speciesName,
-    this.indonesianName,
-    this.description,
-    this.imageUrl);
+  Hewan({
+    required this.speciesName,
+    required this.indonesianName,
+    required this.description,
+    required this.imageUrl});
 }
