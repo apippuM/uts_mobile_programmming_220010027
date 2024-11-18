@@ -27,6 +27,7 @@ class _HewanEntryState extends State<HewanEntry> {
   void initState() {
     super.initState();
     if (widget.selectedHewan != null) {
+      final selectedHewan = widget.selectedHewan!;
       _speciesNameController.text = widget.selectedHewan!.speciesName;
       _indonesianNameController.text = widget.selectedHewan!.indonesianName;
       _descriptionController.text = widget.selectedHewan!.description;
@@ -38,7 +39,7 @@ class _HewanEntryState extends State<HewanEntry> {
     if (_formkey.currentState!.validate()) {
       _formkey.currentState!.save();
       final hewan = Hewan(
-        speciesName: _speciesNameController.text,
+        speciesName: widget.selectedHewan?.speciesName ?? _speciesNameController.text,
         indonesianName: _indonesianNameController.text,
         description: _descriptionController.text,
         imageUrl: _imageUrlController.text,

@@ -74,6 +74,7 @@ class _MainPageState extends State<MainPage> {
                   selectedHewan: selectedHewan
                 );
               }));
+              
               Navigator.of(context).pop();
             },
           ),
