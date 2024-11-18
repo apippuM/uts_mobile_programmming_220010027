@@ -68,14 +68,13 @@ class _MainPageState extends State<MainPage> {
           TextButton(
             child: const Text('Update'),
             onPressed: () {
+              Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return HewanEntry(
                   onSaved: _saveHewan,
                   selectedHewan: selectedHewan
                 );
               }));
-              
-              Navigator.of(context).pop();
             },
           ),
         ]
